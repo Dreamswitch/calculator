@@ -95,7 +95,12 @@
                     } else if (open > close) {
                         toAdd = open - close;
                         for (i = 0; i < toAdd; i++) {
-                            screen.textContent += ")";
+                            if (lastElement === '(') {
+                                screen.textContent += "1)";
+                                lastElement="null"
+                            } else {
+                                screen.textContent += ")";
+                            }
                         }
                         screen.textContent = eval(screen.textContent);
                     } else {
@@ -183,6 +188,8 @@
                     lastElement === ')' && elementType === "9"
                 ) {
                     screen.textContent += `*${elementType}`;
+                } else if (lastElement === '(' && elementType === ')') {
+                    screen.textContent += `1${elementType}`;
                 }
                 else {
                     screen.textContent += elementType;
