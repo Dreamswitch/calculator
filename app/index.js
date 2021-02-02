@@ -146,18 +146,21 @@
                     elementType === "%" && lastElement === "-" ||
                     elementType === "%" && lastElement === "+" ||
                     elementType === "%" && lastElement === "%" ||
+                    elementType === "%" && lastElement === "(" ||
                     elementType === "%" && firstElement === "" ||
                     elementType === "/" && lastElement === "/" ||
                     elementType === "/" && lastElement === "*" ||
                     elementType === "/" && lastElement === "-" ||
                     elementType === "/" && lastElement === "+" ||
                     elementType === "/" && lastElement === "%" ||
+                    elementType === "/" && lastElement === "(" ||
                     elementType === "/" && firstElement === "" ||
                     elementType === "*" && lastElement === "/" ||
                     elementType === "*" && lastElement === "%" ||
                     elementType === "*" && lastElement === "*" ||
                     elementType === "*" && lastElement === "-" ||
                     elementType === "*" && lastElement === "+" ||
+                    elementType === "*" && lastElement === "(" ||
                     elementType === "*" && firstElement === "" ||
                     elementType === "-" && lastElement === "/" ||
                     elementType === "-" && lastElement === "*" ||
